@@ -6,23 +6,21 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
 /**
- * Change me.
+ * This program takes the user's number from the input file and calculates
+ * the factorial of that number, which is then printed out in the output file.
  *
  * @author Jaydin Madore
  * @version 1.0
  * @since 2024-04-18
  */
-
 // Factorial class
 public final class Factorial {
-
     /** Private constructor to prevent instantiation. */
     private Factorial() {
         throw new UnsupportedOperationException("Cannot instantiate");
     }
-
-
     /**
      * This is the main method.
      *
@@ -46,18 +44,16 @@ public final class Factorial {
             }
             reader.close();
             writer.close();
-
         } catch (IOException e) {
             System.err.println("Error reading/writing files: " + e.getMessage());
         }
     }
-
     private static int factorialCul (int n) {
         //The base case for the recursion function
         if (n == 1)
         //This wll return 1    
         return 1;
         else
-            return n * factorialCul(n - 1);
+        return n * factorialCul(n - 1);
         }
 }
